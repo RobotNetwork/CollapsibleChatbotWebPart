@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "collapsible-chat-embed-client-side-solution",
+    "id": "d0cd9671-4925-457a-b4d2-9520bc0fa6fe",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "collapsible-chat-embed description"
+      },
+      "longDescription": {
+        "default": "collapsible-chat-embed description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "collapsible-chat-embed Feature",
+        "description": "The feature that activates elements of the collapsible-chat-embed solution.",
+        "id": "1041c1ae-cfda-4cb9-9fb2-e3b6a234f4d4",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/collapsible-chat-embed.sppkg"
+  }
+}

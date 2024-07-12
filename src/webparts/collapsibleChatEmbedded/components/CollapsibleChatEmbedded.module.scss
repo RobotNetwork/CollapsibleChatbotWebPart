@@ -1,0 +1,58 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+
+.chatContainer {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: auto;
+    background-color: #003057;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.chatContainer.open {
+    animation: slideChat 0.5s ease-in-out forwards;
+    text-align: right;
+}
+
+.chatContainer.close {
+    animation: slideChat 0.5s ease-in-out reverse forwards;
+    text-align: center;
+}
+
+@keyframes slideChat {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.chatButton {
+    width: auto;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #003057;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.chatButton:hover {
+    background-color: #001f3f;
+}
+
+.chatIframe {
+    border-right: solid #003057 1px !important;
+    border-left: solid #003057 1px !important;
+    width: auto;
+    transition: height 0.5s ease-in-out;
+    height: 400px;
+}

@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "collapsible-chat-embed-client-side-solution",
-    "id": "d0cd9671-4925-457a-b4d2-9520bc0fa6fe",
-    "version": "1.0.0.0",
+    "name": "Collapsible Reece Chat",
+    "id": "b3f38c76-46c6-447b-b608-8872b614a943",
+    "version": "1.0.2.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -27,10 +27,10 @@
     },
     "features": [
       {
-        "title": "collapsible-chat-embed Feature",
-        "description": "The feature that activates elements of the collapsible-chat-embed solution.",
+        "title": "Collapsible Reece Chat",
+        "description": "Embeds the Reece Chat bot.",
         "id": "1041c1ae-cfda-4cb9-9fb2-e3b6a234f4d4",
-        "version": "1.0.0.0"
+        "version": "1.0.2.0"
       }
     ]
   },

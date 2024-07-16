@@ -1,4 +1,4 @@
-# Collapsible Chatbot Web Part
+# Collapsible Reece Chat (SPFx Web Part)
 
 ## Summary
 - Embeds the Innovation Team's chat bot into SharePoint via this web part.
@@ -8,6 +8,7 @@
 | Version | Date          | Comments    |
 | ------- | ------------- | ----------- |
 | 1.0     | July 12, 2024 | Initial POC |
+| 1.0.2.0 | July 16, 2024 | Many changes, cleaned up CSS, added SVGs, fixed animation bug. |
 
 ## Frameworks
 - [SharePoint (SPFx) Framework](https://aka.ms/spfx) (version 1.19.0)

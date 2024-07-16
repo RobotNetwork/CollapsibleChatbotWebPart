@@ -83,10 +83,7 @@ export default class CollapsibleChatEmbedded extends React.Component<
                     )} 
                 </div>
                 <iframe
-                    // src={`https://webchat.botframework.com/embed/ReeceChat?s=${process.env.CHAT_WEBPART_SECRET}`}
-                    src={
-                        "https://webchat.botframework.com/embed/ReeceChat?s=A29JyzJxtpE.hT5CtuUMaFATWQGWh2Pbo_ATW1w65oGJp8-htAgcNug"
-                    }
+                    src={`https://webchat.botframework.com/embed/ReeceChat?s=${process.env.CHAT_WEBPART_SECRET}`}
                     width="inherit"
                     className={styles.chatIframe}
                     style={{

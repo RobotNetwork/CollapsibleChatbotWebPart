@@ -47,20 +47,24 @@ export default class CollapsibleChatEmbedded extends React.Component<
     }
 
     public render(): React.ReactElement<ICollapsibleChatEmbeddedProps> {
-        const containerClass = `${styles.chatContainer} ${
-            this.state.animate
-                ? this.state.isOpen
-                    ? styles.open
-                    : styles.close
-                : ""
-        }`;
+        // const containerClass = `${styles.chatContainer} ${
+        //     this.state.animate
+        //         ? this.state.isOpen
+        //             ? styles.open
+        //             : styles.close
+        //         : ""
+        // }`;
+        const containerClass = `
+            ${styles.chatContainer} 
+            ${this.state.isOpen ? styles.open : styles.close  }
+            `;
 
         return (
             <div
                 className={containerClass}
-                style={{
-                    width: this.state.isOpen ? "450px" : "250px",
-                }}
+                // style={{
+                //     width: this.state.isOpen ? "450px" : "200px",
+                // }}
             >
                 <div
                     className={`${styles.chatButton} ${this.state.isOpen ? styles.open : styles.closed}`}

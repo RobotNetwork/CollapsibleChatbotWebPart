@@ -11,14 +11,14 @@
     border-top-right-radius: 10px;
     z-index: 1000;
     overflow: hidden;
-    width: 250px;
+    width: 200px;
 
     &.open {
         animation: slideChat 0.5s ease-in-out forwards;
+        width: 450px;
     }
 
     &.close:hover {
-        // background-color: #001f3f;
         background-color: #1b4874;
     }
     
@@ -30,6 +30,15 @@
         animation: shake 0.5s linear;
         animation-iteration-count: 12;
         animation-fill-mode: forwards;
+    }
+
+    @media (max-width: 600px) {
+        right: 10px;
+        width: 100%;
+
+        &.open {
+            width: 100%;
+        }
     }
 }
 
@@ -99,7 +108,7 @@
 
 @keyframes slideChat {
     0% {
-        transform: translateY(100%);
+        transform: translateY(90%);
     }
     100% {
         transform: translateY(0);

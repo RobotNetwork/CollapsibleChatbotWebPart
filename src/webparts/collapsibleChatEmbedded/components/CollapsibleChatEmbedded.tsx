@@ -8,25 +8,34 @@ import { IoClose } from "react-icons/io5";
 interface ICollapsibleChatEmbeddedState {
     isOpen: boolean;
     animate: boolean;
+    doneAnimating: boolean;
 }
 
 export default class CollapsibleChatEmbedded extends React.Component<
     ICollapsibleChatEmbeddedProps,
     ICollapsibleChatEmbeddedState
 > {
-    state: ICollapsibleChatEmbeddedState = {
-        // migrate away from this
-        isOpen: false,
-        animate: false,
-    };
+    constructor(props: ICollapsibleChatEmbeddedProps | Readonly<ICollapsibleChatEmbeddedProps>) {
+        super(props);
+        this.state = {
+            isOpen: false,
+            animate: false,
+            doneAnimating: true,
+        };
+    }
 
-    toggleChat = (): void => {
-        this.setState(
-            (prevState) => ({
-                isOpen: !prevState.isOpen,
-                animate: !prevState.animate,
-            })
-        );
+    openChat = (): void => {
+        this.setState({ animate: true, isOpen: true });
+        setTimeout(() => {
+            this.setState({ animate: false, doneAnimating: true });
+        }, 600);
+    };
+    
+    closeChat = (): void => {
+        this.setState({ animate: true, isOpen: false });
+        setTimeout(() => {
+            this.setState({ animate: false, doneAnimating: true });
+        }, 600);
     };
 
     doNothing = (): void => {
@@ -55,7 +64,7 @@ export default class CollapsibleChatEmbedded extends React.Component<
             >
                 <div
                     className={`${styles.chatButton} ${this.state.isOpen ? styles.open : styles.closed}`}
-                    onClick={!this.state.isOpen ? this.toggleChat : this.doNothing}
+                    onClick={!this.state.isOpen ? this.openChat : this.doNothing}
                     style={{cursor: this.state.isOpen ? "default" : "pointer"}}
                 >
                     <span
@@ -76,7 +85,7 @@ export default class CollapsibleChatEmbedded extends React.Component<
                         <Tooltip title="Close Chat" placement="top">
                         <span
                             className={styles.closeButton}
-                            onClick={this.toggleChat}>
+                            onClick={this.closeChat}>
                             <IoClose />
                         </span>
                         </Tooltip> 
@@ -88,7 +97,7 @@ export default class CollapsibleChatEmbedded extends React.Component<
                     width="inherit"
                     className={styles.chatIframe}
                     style={{
-                        display: this.state.isOpen ? "block" : "none",
+                        display: this.state.doneAnimating ? "block" : "none",
                         height: this.state.isOpen ? "500px" : "0px",
                     }}
                 />

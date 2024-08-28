@@ -18,7 +18,8 @@
     }
 
     &.close:hover {
-        background-color: #001f3f;
+        // background-color: #001f3f;
+        background-color: #1b4874;
     }
     
     &.close {
@@ -43,7 +44,7 @@
 
 .chatButton {
     display: flex;
-    translate: 0px 2px;
+    translate: 0px 4px;
     padding: 10px;
     font-size: 18px;
     cursor: pointer;

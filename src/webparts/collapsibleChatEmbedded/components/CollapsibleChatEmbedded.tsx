@@ -45,18 +45,18 @@ export default class CollapsibleChatEmbedded extends React.Component<
                     : styles.close
                 : ""
         }`;
+
         return (
             <div
                 className={containerClass}
                 style={{
-                    translate: this.state.isOpen ? "0" : "0px 17px",
                     width: this.state.isOpen ? "450px" : "250px",
                 }}
             >
                 <div
                     className={`${styles.chatButton} ${this.state.isOpen ? styles.open : styles.closed}`}
                     onClick={!this.state.isOpen ? this.toggleChat : this.doNothing}
-                    style={{cursor: this.state.isOpen ? "default" : "pointer",}}
+                    style={{cursor: this.state.isOpen ? "default" : "pointer"}}
                 >
                     <span
                         className={styles.chatLabel}
@@ -80,14 +80,15 @@ export default class CollapsibleChatEmbedded extends React.Component<
                             <IoClose />
                         </span>
                         </Tooltip> 
-                    )} 
+                    )}
                 </div>
                 <iframe
-                    src={`https://webchat.botframework.com/embed/ReeceChat?s=${process.env.CHAT_WEBPART_SECRET}`}
+                    // src={`https://webchat.botframework.com/embed/ReeceChat?s=${process.env.CHAT_WEBPART_SECRET}`}
+                    src={`https://webchat.botframework.com/embed/ReeceChat?s=A29JyzJxtpE.hT5CtuUMaFATWQGWh2Pbo_ATW1w65oGJp8-htAgcNug`}
                     width="inherit"
                     className={styles.chatIframe}
                     style={{
-                        // display: this.state.isOpen ? "block" : "none",
+                        display: this.state.isOpen ? "block" : "none",
                         height: this.state.isOpen ? "500px" : "0px",
                     }}
                 />

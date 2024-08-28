@@ -12,7 +12,6 @@
     z-index: 1000;
     overflow: hidden;
     width: 250px;
-    translate: 0px 17px;
 
     &.open {
         animation: slideChat 0.5s ease-in-out forwards;
@@ -38,7 +37,7 @@
     border-left: solid #003057 1px !important;
     width: inherit;
     transition: height 0.5s ease-in-out;
-    height: 500px;
+    // height: 500px;
     box-sizing: border-box;
 }
 
@@ -51,8 +50,6 @@
     border: none;
     background-color: #003057;
     color: white;
-    // border-top-left-radius: 10px;
-    // border-top-right-radius: 10px;
     transition: background-color 0.3s;
 
     &.closed {

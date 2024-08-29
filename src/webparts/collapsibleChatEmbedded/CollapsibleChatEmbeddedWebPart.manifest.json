@@ -18,11 +18,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
     "group": { "default": "Advanced" },
-    "title": { "default": "Collapsible Chat (Embedded)" },
-    "description": { "default": "Collapsible Chat (Embedded) description" },
+    "title": { "default": "Collapsible Reece Chat" },
+    "description": { "default": "Reece USA Chat App" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Collapsible Chat (Embedded)"
+      "description": "Reece USA Chat App"
     }
   }]
 }

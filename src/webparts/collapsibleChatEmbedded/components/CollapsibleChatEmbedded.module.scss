@@ -17,10 +17,6 @@
         animation: slideChat 0.5s ease-in-out forwards;
         width: 450px;
     }
-
-    &.close:hover {
-        background-color: #1b4874;
-    }
     
     &.close {
         animation: slideChat 0.5s ease-in-out reverse;
@@ -34,10 +30,10 @@
 
     @media (max-width: 600px) {
         right: 10px;
-        width: 100%;
+        width: 50%;
 
         &.open {
-            width: 100%;
+            width: 90%;
         }
     }
 }
@@ -45,9 +41,8 @@
 .chatIframe {
     border-right: solid #003057 1px !important;
     border-left: solid #003057 1px !important;
-    width: inherit;
+    width: 100%;
     transition: height 0.5s ease-in-out;
-    // height: 500px;
     box-sizing: border-box;
 }
 

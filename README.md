@@ -9,6 +9,7 @@
 | ------- | ------------- | ----------- |
 | 1.0     | July 12, 2024 | Initial POC |
 | 1.0.2.0 | July 16, 2024 | Many changes, cleaned up CSS, added SVGs, fixed animation bug. |
+| 1.0.3.0 | August 29, 2024 | Fixed styling bugs, now works properly for mobile. |
 
 ## Frameworks
 - [SharePoint (SPFx) Framework](https://aka.ms/spfx) (version 1.19.0)
@@ -17,15 +18,7 @@
 ## Prerequisites
 The SPFx framework requires specific versions of NodeJS. Version 18.17.1 was used to build this web part. Highly recommend utilizing NVM to manage the current version of NodeJS.
 
-## Getting Started
-- Clone this repository
-- Ensure that you are at the solution folder
-- In the terminal run:
-  - **npm install**
-  - **gulp serve**
-- Acquire the `src` URL for the iFrame, then update it in `CollapsibleChatEmbedded.tsx`
-
-### Set Up Development Environment (manually)
+### Set Up Development Environment
 1. Run the following commands
 ```
 npm install -g yo gulp
@@ -48,6 +41,20 @@ gulp trust-dev-cert
 5. Update the property `initialPage` within the file `/config/serve.json`
 6. Serve the new web part by running `gulp serve`
 7. Begin modifying the web part, navigate to `/src/webparts/webpart/webpart.ts`
+
+## Getting Started
+- Clone this repository
+- Ensure that you are at the solution folder
+- In the terminal run:
+  - **npm install**
+  - **gulp serve**
+- Acquire the `src` URL for the iFrame, then update it in `CollapsibleChatEmbedded.tsx`
+
+### Testing Locally
+1. By default, `gulp serve` will automatically open the URL defined by the `initialPage` property in `/config/serve.json`. For most purposes, this will work fine.
+2. To test a web part for mobile use, run `gulp serve --nobrowser`. Navigate to any SharePoint site within the site hierarchy, then append the following to the URL `?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/manifests.js`
+3. The web parts listed will not appear as 'local' by category, but should be listed nonetheless. Add the web part.
+4. Open your browser's Dev Tools (F12), then enable **Responsive Design Mode**, or press `Ctrl + Shift + M`
 
 ### Bundle & Ship (admin only)
 1. Open terminal

@@ -11,6 +11,7 @@ declare interface ICollapsibleChatEmbeddedWebPartStrings {
   AppOfficeEnvironment: string;
   AppOutlookEnvironment: string;
   UnknownEnvironment: string;
+  ChatUrlFieldLabel: string;
 }
 
 declare module 'CollapsibleChatEmbeddedWebPartStrings' {

@@ -22,7 +22,8 @@
     "description": { "default": "Reece USA Chat App" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Reece USA Chat App"
+      "description": "Reece USA Chat App",
+      "chatURL": ""
     }
   }]
 }

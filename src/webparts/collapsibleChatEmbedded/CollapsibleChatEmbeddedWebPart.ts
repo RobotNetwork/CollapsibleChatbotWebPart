@@ -11,10 +11,10 @@ import { IReadonlyTheme } from "@microsoft/sp-component-base";
 import * as strings from "CollapsibleChatEmbeddedWebPartStrings";
 import CollapsibleChatEmbedded from "./components/CollapsibleChatEmbedded";
 import type { ICollapsibleChatEmbeddedProps } from "./components/ICollapsibleChatEmbeddedProps";
-// export interface ICollapsibleChatEmbeddedWebPartProps {
-//     animate: boolean;
-//     isOpen: boolean;
-// }
+
+export interface ICollapsibleChatEmbeddedWebPartProps {
+    chatUrl: string;
+  }
 
 export default class CollapsibleChatEmbeddedWebPart extends BaseClientSideWebPart<ICollapsibleChatEmbeddedProps> {
     public render(): void {
@@ -22,8 +22,8 @@ export default class CollapsibleChatEmbeddedWebPart extends BaseClientSideWebPar
             React.createElement(CollapsibleChatEmbedded, {
                 isOpen: this.properties.isOpen,
                 animate: this.properties.animate,
+                chatUrl: this.properties.chatUrl,
             });
-
         ReactDom.render(element, this.domElement);
     }
 
@@ -67,10 +67,10 @@ export default class CollapsibleChatEmbeddedWebPart extends BaseClientSideWebPar
                     },
                     groups: [
                         {
-                            groupName: strings.BasicGroupName,
+                            groupName: "Settings",
                             groupFields: [
-                                PropertyPaneTextField("description", {
-                                    label: strings.DescriptionFieldLabel,
+                                PropertyPaneTextField("chatUrl", {
+                                    label: "Chat URL",
                                 }),
                             ],
                         },

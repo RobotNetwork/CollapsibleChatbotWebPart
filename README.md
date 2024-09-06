@@ -10,6 +10,7 @@
 | 1.0     | July 12, 2024 | Initial POC |
 | 1.0.2.0 | July 16, 2024 | Many changes, cleaned up CSS, added SVGs, fixed animation bug. |
 | 1.0.3.0 | August 29, 2024 | Fixed styling bugs, now works properly for mobile. |
+| 1.0.4.0 | September 6th, 2024 | Removed hardcoded URL, is now configurable in the web part settings. |
 
 ## Frameworks
 - [SharePoint (SPFx) Framework](https://aka.ms/spfx) (version 1.19.0)

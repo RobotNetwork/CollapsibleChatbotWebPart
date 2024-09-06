@@ -3,7 +3,7 @@
   "solution": {
     "name": "Collapsible Reece Chat",
     "id": "b3f38c76-46c6-447b-b608-8872b614a943",
-    "version": "1.0.3.0",
+    "version": "1.0.4.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -30,7 +30,7 @@
         "title": "Collapsible Reece Chat",
         "description": "Embeds the Reece Chat bot.",
         "id": "1041c1ae-cfda-4cb9-9fb2-e3b6a234f4d4",
-        "version": "1.0.3.0"
+        "version": "1.0.4.0"
       }
     ]
   },

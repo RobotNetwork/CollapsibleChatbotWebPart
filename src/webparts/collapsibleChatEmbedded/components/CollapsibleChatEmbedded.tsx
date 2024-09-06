@@ -47,13 +47,6 @@ export default class CollapsibleChatEmbedded extends React.Component<
     }
 
     public render(): React.ReactElement<ICollapsibleChatEmbeddedProps> {
-        // const containerClass = `${styles.chatContainer} ${
-        //     this.state.animate
-        //         ? this.state.isOpen
-        //             ? styles.open
-        //             : styles.close
-        //         : ""
-        // }`;
         const containerClass = `
             ${styles.chatContainer} 
             ${this.state.isOpen ? styles.open : styles.close}
@@ -93,8 +86,8 @@ export default class CollapsibleChatEmbedded extends React.Component<
                     )}
                 </div>
                 <iframe
-                    // src={`https://webchat.botframework.com/embed/ReeceChat?s=${process.env.CHAT_WEBPART_SECRET}`}
-                    src={`https://webchat.botframework.com/embed/ReeceChat?s=A29JyzJxtpE.hT5CtuUMaFATWQGWh2Pbo_ATW1w65oGJp8-htAgcNug`}
+                    // src={`https://webchat.botframework.com/embed/ReeceChat?s=A29JyzJxtpE.hT5CtuUMaFATWQGWh2Pbo_ATW1w65oGJp8-htAgcNug`}
+                    src={this.props.chatUrl}
                     width="inherit"
                     className={styles.chatIframe}
                     style={{
